@@ -1,0 +1,22 @@
+{
+  "name": "iwas",
+  "displayName": "IWAS Assistant",
+  "version": "1.0.0",
+  "description": "Intelligent WiFi Access & Presence Service plugin. Diagnose network issues, monitor active hotspot sessions, inspect revenue, and optimize captive portal packages.",
+  "author": {
+    "name": "9xlayer",
+    "email": "devduyph@gmail.com",
+    "url": "https://getiwas.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "iwas",
+    "wifi",
+    "hotspot",
+    "radius",
+    "network",
+    "presence",
+    "billing"
+  ],
+  "logo": "assets/logo.svg"
+}

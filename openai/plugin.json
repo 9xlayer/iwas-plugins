@@ -1,0 +1,35 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "IWAS",
+  "name_for_model": "iwas",
+  "description_for_human": "IWAS – Intelligent WiFi Access & Presence Service. Monitor hotspot network, manage packages, audit accounting, and track revenue directly from your AI assistant.",
+  "description_for_model": "IWAS assistant plugin. Enables AI assistants to interact with the IWAS API to query hotspot diagnostics, analyze network revenue, inspect active user sessions, optimize package offerings, and publish content.",
+  "auth": {
+    "type": "oauth",
+    "authorization_url": "https://getiwas.com/api/auth/oauth2/authorize",
+    "client_url": "https://getiwas.com/api/auth/oauth2/token",
+    "scope": "offline_access",
+    "authorization_content_type": "application/json"
+  },
+  "mcp_server": "mcp.json",
+  "logo_url": "https://raw.githubusercontent.com/9xlayer/iwas-plugins/main/plugins/iwas/assets/logo.svg",
+  "contact_email": "support@getiwas.com",
+  "legal_info_url": "https://getiwas.com/terms",
+  "privacy_policy_url": "https://getiwas.com/privacy",
+  "skills": [
+    "iwas-network-diagnostics",
+    "iwas-revenue-digest",
+    "iwas-session-monitor",
+    "iwas-package-optimizer",
+    "iwas-content-publisher"
+  ],
+  "starter_prompts": [
+    "@IWAS, check network health and diagnose any router or RADIUS issues.",
+    "@IWAS, produce a revenue digest and summarize today's top performing packages.",
+    "@IWAS, how many active sessions are currently online on the hotspot?",
+    "@IWAS, analyze package performance and suggest optimal promo windows.",
+    "@IWAS, list recent blog posts on the captive portal."
+  ],
+  "category": "Business",
+  "version": "1.0.0"
+}

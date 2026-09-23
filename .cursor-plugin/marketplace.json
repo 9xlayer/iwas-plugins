@@ -1,0 +1,18 @@
+{
+  "name": "iwas-marketplace",
+  "owner": {
+    "name": "9xlayer",
+    "email": "devduyph@gmail.com"
+  },
+  "metadata": {
+    "description": "Official Cursor plugins for IWAS Intelligent WiFi Access & Presence Service",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "iwas",
+      "source": "./plugins/iwas",
+      "description": "Intelligent WiFi Access & Presence Service assistant plugin for hotspot health, session monitoring, and revenue analysis."
+    }
+  ]
+}
