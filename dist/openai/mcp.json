@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "iwas": {
+      "url": "https://getiwas.com/mcp",
+      "type": "sse"
+    }
+  }
+}

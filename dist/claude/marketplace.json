@@ -1,0 +1,13 @@
+{
+  "name": "iwas",
+  "owner": "9xlayer",
+  "version": "1.0.0",
+  "description": "IWAS – Intelligent WiFi Access & Presence Service. Monitor hotspot network, manage packages, audit accounting, and track revenue directly from your AI assistant.",
+  "plugins": [
+    {
+      "name": "iwas",
+      "source": "./.claude-plugin/plugin.json",
+      "description": "IWAS – Intelligent WiFi Access & Presence Service. Monitor hotspot network, manage packages, audit accounting, and track revenue directly from your AI assistant."
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "iwas",
+  "version": "1.0.0",
+  "description": "IWAS – Intelligent WiFi Access & Presence Service. Monitor hotspot network, manage packages, audit accounting, and track revenue directly from your AI assistant.",
+  "author": {
+    "name": "9xlayer",
+    "url": "https://getiwas.com"
+  },
+  "mcpServers": {
+    "iwas": {
+      "url": "https://getiwas.com/mcp"
+    }
+  },
+  "skills": [
+    "iwas-network-diagnostics",
+    "iwas-revenue-digest",
+    "iwas-session-monitor",
+    "iwas-package-optimizer",
+    "iwas-content-publisher"
+  ]
+}
