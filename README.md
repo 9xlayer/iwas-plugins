@@ -8,7 +8,7 @@ This repository contains multi-platform extensions, tools, skills, and model-con
 
 | Platform | Manifest & Location | Status |
 | --- | --- | --- |
-| **Cursor Marketplace** | `.cursor-plugin/marketplace.json`, `plugins/iwas/` | Ready for Marketplace |
+| **Cursor Marketplace** | `.cursor-plugin/marketplace.json`, `plugins/iwas/` | Pending Review (Submitted) |
 | **Anthropic Claude** | `.claude-plugin/plugin.json` | Supported |
 | **OpenAI / ChatGPT** | `openai/plugin.json` | Supported |
 | **Cline** | `cline/`, `plugins/cline/iwas-gitnexus.ts` | Supported |

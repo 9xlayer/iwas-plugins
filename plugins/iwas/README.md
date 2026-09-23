@@ -1,6 +1,7 @@
 # IWAS Cursor Plugin
 
-> **IWAS** — Intelligent WiFi Access & Presence Service
+> **IWAS** — Intelligent WiFi Access & Presence Service  
+> **Status:** Pending Review (Submitted to Cursor Marketplace)
 
 Distribute intelligent hotspot diagnostics, live session monitoring, revenue optimization, and content publishing directly into Cursor.
 
