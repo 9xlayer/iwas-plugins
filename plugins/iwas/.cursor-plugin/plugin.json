@@ -1,6 +1,6 @@
 {
   "name": "iwas",
-  "displayName": "IWAS Assistant",
+  "displayName": "IWAS",
   "version": "1.0.0",
   "description": "Intelligent WiFi Access & Presence Service plugin. Diagnose network issues, monitor active hotspot sessions, inspect revenue, and optimize captive portal packages.",
   "author": {
