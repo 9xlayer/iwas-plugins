@@ -60,7 +60,7 @@ When connecting to a local IWAS instance running with `MCP_DCR_MODE=anonymous`:
 {
   "mcpServers": {
     "iwas": {
-      "url": "http://localhost:3001/mcp"
+      "url": "https://<your-dev-domain>/mcp"
     }
   }
 }

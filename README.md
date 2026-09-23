@@ -52,7 +52,7 @@ iwas-plugins/
 
 IWAS exposes a high-performance Model Context Protocol (MCP) endpoint over Server-Sent Events (SSE) and HTTP at:
 ```text
-https://getiwas.com/mcp   (or http://localhost:3001/mcp in local dev)
+https://getiwas.com/mcp
 ```
 
 All agent interactions are authenticated using **OAuth 2.1 with PKCE**, strictly scoped to your tenant organization, and subject to fine-grained role-based access control (RBAC).
@@ -108,7 +108,7 @@ When running IWAS locally or on internal infrastructure with `MCP_DCR_MODE=anony
 {
   "mcpServers": {
     "iwas": {
-      "url": "http://localhost:3001/mcp"
+      "url": "https://<your-dev-domain>/mcp"
     }
   }
 }
