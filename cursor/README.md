@@ -26,7 +26,7 @@ Because Cursor's UI does not currently prompt for Initial Access Tokens, product
 
 1. **Ask your IWAS deployment operator** to provision a client ID and secret via:
    ```bash
-   pnpm mcp:create-client -- --client-id cursor --name "Cursor IDE" --redirect-uri http://localhost:8787/callback --scopes "network:read,session:read,analytics:read,package:read,content:write,offline_access" --apply
+   pnpm mcp:create-client -- --client-id cursor --name "Cursor IDE" --redirect-uri http://localhost:8787/callback --scopes "diagnostics:read,diagnostics:write,session:read,analytics:read,package:read,blog:read,blog:write,blog:publish,offline_access" --apply
    ```
 
 2. **Configure `.cursor/mcp.json`:**
@@ -39,11 +39,14 @@ Because Cursor's UI does not currently prompt for Initial Access Tokens, product
            "CLIENT_ID": "cursor",
            "CLIENT_SECRET": "<your-client-secret>",
            "scopes": [
-             "network:read",
+             "diagnostics:read",
+             "diagnostics:write",
              "session:read",
              "analytics:read",
              "package:read",
-             "content:write",
+             "blog:read",
+             "blog:write",
+             "blog:publish",
              "offline_access"
            ]
          }
@@ -79,7 +82,7 @@ curl -X POST https://getiwas.com/api/auth/oauth2/register \
     "redirect_uris": ["http://localhost:8787/callback"],
     "grant_types": ["authorization_code", "refresh_token"],
     "response_types": ["code"],
-    "scope": "network:read session:read analytics:read package:read offline_access"
+    "scope": "diagnostics:read diagnostics:write session:read analytics:read package:read blog:read blog:write blog:publish offline_access"
   }'
 ```
 Use the returned `client_id` and `client_secret` in your `.cursor/mcp.json`.

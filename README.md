@@ -159,7 +159,7 @@ curl -X POST https://getiwas.com/api/auth/oauth2/register \
     "redirect_uris": ["http://localhost:8787/callback"],
     "grant_types": ["authorization_code", "refresh_token"],
     "response_types": ["code"],
-    "scope": "network:read session:read analytics:read package:read offline_access"
+    "scope": "diagnostics:read diagnostics:write session:read analytics:read package:read blog:read blog:write blog:publish offline_access"
   }'
 ```
 
@@ -179,7 +179,7 @@ pnpm mcp:create-client -- \
   --client-id cursor \
   --name "Cursor IDE" \
   --redirect-uri http://localhost:8787/callback \
-  --scopes "network:read,session:read,analytics:read,package:read,content:write,offline_access" \
+  --scopes "diagnostics:read,diagnostics:write,session:read,analytics:read,package:read,blog:read,blog:write,blog:publish,offline_access" \
   --apply
 ```
 
@@ -195,11 +195,14 @@ Add the static credentials to your Cursor configuration:
         "CLIENT_ID": "cursor",
         "CLIENT_SECRET": "<your-provisioned-client-secret>",
         "scopes": [
-          "network:read",
+          "diagnostics:read",
+          "diagnostics:write",
           "session:read",
           "analytics:read",
           "package:read",
-          "content:write",
+          "blog:read",
+          "blog:write",
+          "blog:publish",
           "offline_access"
         ]
       }
@@ -216,12 +219,12 @@ Add the static credentials to your Cursor configuration:
 
 | Scope | Capability |
 | :--- | :--- |
-| `network:read` | Check hotspot health, router online status, FreeRADIUS heartbeat (`iwas-network-diagnostics`). |
+| `diagnostics:read` | Platform/network health, error events, spans, and FreeRADIUS heartbeat (`iwas-network-diagnostics`). |
+| `diagnostics:write` | Triage issues (resolve/ignore) via diagnostics tools. |
 | `session:read` | Monitor active hotspot sessions, traffic usage per device/MAC (`iwas-session-monitor`). |
 | `analytics:read` | Generate revenue digests, sales breakdown, peak-window analytics (`iwas-revenue-digest`). |
 | `package:read` | Audit WiFi billing packages and duration pricing (`iwas-package-optimizer`). |
-| `content:write` | Author announcements and captive portal news articles (`iwas-content-publisher`). |
-| `diagnostics:read` | Platform-level error events and spans (platform owner only). |
+| `blog:read` / `blog:write` / `blog:publish` | Author and publish captive portal announcements (`iwas-content-publisher`). |
 | `offline_access` | Enables silent token rotation and background renewal without re-prompting. |
 
 ---

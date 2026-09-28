@@ -6,11 +6,14 @@
         "CLIENT_ID": "${CLIENT_ID}",
         "CLIENT_SECRET": "${CLIENT_SECRET}",
         "scopes": [
-          "network:read",
+          "diagnostics:read",
+          "diagnostics:write",
           "session:read",
           "analytics:read",
           "package:read",
-          "content:write",
+          "blog:read",
+          "blog:write",
+          "blog:publish",
           "offline_access"
         ]
       }
