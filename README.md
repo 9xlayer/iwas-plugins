@@ -28,13 +28,14 @@ iwas-plugins/
 ├── .cursor-plugin/
 │   └── marketplace.json            # Cursor Marketplace catalog definition
 ├── dist/                           # Compiled distribution bundles for each platform
-│   ├── cursor/                     # Installable Cursor marketplace (.cursor-plugin/marketplace.json + iwas/)
+│   ├── cursor/                     # Self-contained install folder (marketplace.json + plugin.json + skills)
 │   ├── claude/                     # Claude bundle (.claude-plugin/plugin.json + marketplace.json + skills)
 │   ├── openai/                     # OpenAI bundle (plugin.json + mcp.json + skills)
 │   └── iwas-openai-plugin.zip      # Packaged zip for OpenAI portal upload
 ├── plugins/
-│   ├── iwas/                       # Cursor plugin package (marketplace source of truth)
+│   ├── iwas/                       # Cursor plugin package (also installable via Add from folder)
 │   │   ├── .cursor-plugin/
+│   │   │   ├── marketplace.json    # self-source "." for folder install
 │   │   │   └── plugin.json
 │   │   ├── assets/logo.svg
 │   │   ├── mcp.json
@@ -50,16 +51,16 @@ iwas-plugins/
 
 ### Install locally in Cursor
 
-"Add plugins from folder" requires a **marketplace** root (`.cursor-plugin/marketplace.json`), not a single plugin directory:
+"Add plugins from folder" looks for `.cursor-plugin/marketplace.json` **inside the folder you select**.
 
-1. Build: from the monorepo root, run `pnpm plugins:build` (or `--target=cursor`).
-2. In Cursor Customize → Plugins, choose **Add from folder**.
-3. Select either:
-   - `plugins/dist/cursor` (built marketplace bundle), or
-   - `plugins/` (repo root — already has `.cursor-plugin/marketplace.json`).
+1. Build: `pnpm plugins:build` (from monorepo root).
+2. Customize → Plugins → **Add from folder**.
+3. Select one of:
+   - `plugins/dist/cursor`
+   - `plugins/plugins/iwas`
+   - `plugins/` (repo marketplace → loads `plugins/iwas`)
 
-Do **not** select `plugins/dist/cursor/iwas` or `plugins/plugins/iwas` alone — those are plugin packages without a marketplace manifest.
-
+Each of those folders contains `.cursor-plugin/marketplace.json`.
 ## MCP Client Configuration & Authentication
 
 IWAS exposes a high-performance Model Context Protocol (MCP) endpoint over Server-Sent Events (SSE) and HTTP at:

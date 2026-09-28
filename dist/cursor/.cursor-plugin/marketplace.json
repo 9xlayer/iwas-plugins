@@ -11,7 +11,7 @@
   "plugins": [
     {
       "name": "iwas",
-      "source": "iwas",
+      "source": ".",
       "description": "IWAS – Intelligent WiFi Access & Presence Service. Monitor hotspot network, manage packages, audit accounting, and track revenue directly from your AI assistant."
     }
   ]
