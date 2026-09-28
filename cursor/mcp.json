@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "iwas": {
+      "url": "https://getiwas.com/mcp",
+      "auth": {
+        "CLIENT_ID": "${CLIENT_ID}",
+        "CLIENT_SECRET": "${CLIENT_SECRET}",
+        "scopes": [
+          "network:read",
+          "session:read",
+          "analytics:read",
+          "package:read",
+          "content:write",
+          "offline_access"
+        ]
+      }
+    }
+  }
+}

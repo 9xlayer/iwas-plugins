@@ -1,0 +1,38 @@
+{
+  "name": "iwas",
+  "displayName": "IWAS",
+  "version": "1.0.0",
+  "description": "Intelligent WiFi Access & Presence Service plugin. Diagnose network issues, monitor active hotspot sessions, inspect revenue, and optimize captive portal packages.",
+  "author": {
+    "name": "9xlayer",
+    "email": "support@getiwas.com",
+    "url": "https://getiwas.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "iwas",
+    "wifi",
+    "hotspot",
+    "radius",
+    "network",
+    "presence",
+    "billing"
+  ],
+  "logo": "https://raw.githubusercontent.com/9xlayer/iwas-plugins/main/assets/logo.svg",
+  "variables": {
+    "type": "object",
+    "properties": {
+      "CLIENT_ID": {
+        "type": "string",
+        "title": "OAuth client ID",
+        "description": "Static OAuth client ID provisioned via pnpm mcp:create-client (Cursor does not support CIMD)."
+      },
+      "CLIENT_SECRET": {
+        "type": "string",
+        "title": "OAuth client secret",
+        "description": "Static OAuth client secret for the Cursor MCP client. Set in Plugins → Configure; never commit the real value."
+      }
+    },
+    "required": ["CLIENT_ID", "CLIENT_SECRET"]
+  }
+}
