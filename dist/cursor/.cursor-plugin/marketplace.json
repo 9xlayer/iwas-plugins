@@ -2,17 +2,17 @@
   "name": "iwas-marketplace",
   "owner": {
     "name": "9xlayer",
-    "email": "support@getiwas.com"
+    "email": "devduyph@gmail.com"
   },
   "metadata": {
-    "description": "IWAS – Intelligent WiFi Access & Presence Service. Monitor hotspot network, manage packages, audit accounting, and track revenue directly from your AI assistant.",
+    "description": "Official Cursor plugins for IWAS Intelligent WiFi Access & Presence Service",
     "version": "1.0.0"
   },
   "plugins": [
     {
       "name": "iwas",
       "source": ".",
-      "description": "IWAS – Intelligent WiFi Access & Presence Service. Monitor hotspot network, manage packages, audit accounting, and track revenue directly from your AI assistant."
+      "description": "Intelligent WiFi Access & Presence Service assistant plugin for hotspot health, session monitoring, and revenue analysis."
     }
   ]
 }

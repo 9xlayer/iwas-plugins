@@ -8,10 +8,10 @@ This repository contains multi-platform extensions, tools, skills, and model-con
 
 | Platform | Manifest & Location | Status |
 | --- | --- | --- |
-| **Cursor Marketplace** | `.cursor-plugin/marketplace.json`, `plugins/iwas/` | Pending Review (Submitted) |
+| **Cursor Marketplace** | `.cursor-plugin/marketplace.json`, `cursor/` | Pending Review (Submitted) |
 | **Anthropic Claude** | `.claude-plugin/plugin.json` | Supported |
 | **OpenAI / ChatGPT** | `openai/plugin.json` | Supported |
-| **Cline** | `cline/`, `plugins/cline/iwas-gitnexus.ts` | Supported |
+| **Cline** | `cline/` | Supported |
 
 ## Included Skills
 
@@ -26,25 +26,28 @@ This repository contains multi-platform extensions, tools, skills, and model-con
 ```text
 iwas-plugins/
 ├── .cursor-plugin/
-│   └── marketplace.json            # Cursor Marketplace catalog definition
-├── dist/                           # Compiled distribution bundles for each platform
-│   ├── cursor/                     # Self-contained install folder (marketplace.json + plugin.json + skills)
-│   ├── claude/                     # Claude bundle (.claude-plugin/plugin.json + marketplace.json + skills)
-│   ├── openai/                     # OpenAI bundle (plugin.json + mcp.json + skills)
-│   └── iwas-openai-plugin.zip      # Packaged zip for OpenAI portal upload
-├── plugins/
-│   ├── iwas/                       # Cursor plugin package (also installable via Add from folder)
-│   │   ├── .cursor-plugin/
-│   │   │   ├── marketplace.json    # self-source "." for folder install
-│   │   │   └── plugin.json
-│   │   ├── assets/logo.svg
-│   │   ├── mcp.json
-│   │   └── skills/
-│   └── cline/                      # Cline tools & workflow rules
-├── skills/                         # Canonical skills directory
-├── config/                         # Unified plugin manifest configuration
+│   └── marketplace.json            # Repo marketplace (source: ./cursor)
+├── cursor/                         # Cursor Plugin package (Add-from-folder target)
+│   ├── .cursor-plugin/
+│   │   ├── marketplace.json        # self-source "." for folder install
+│   │   └── plugin.json
+│   ├── rules/
+│   ├── agents/
+│   ├── commands/
+│   ├── hooks/
+│   ├── skills/
+│   ├── assets/
+│   └── mcp.json
+├── dist/
+│   ├── cursor/                     # Built copy of cursor/ (+ refreshed skills)
+│   ├── claude/
+│   ├── openai/
+│   └── iwas-openai-plugin.zip
+├── skills/                         # Canonical skills source
+├── cline/
+├── openai/
+├── config/
 ├── scripts/
-│   └── validate-template.mjs       # Cursor template verification script
 ├── LICENSE
 └── README.md
 ```
@@ -56,11 +59,10 @@ iwas-plugins/
 1. Build: `pnpm plugins:build` (from monorepo root).
 2. Customize → Plugins → **Add from folder**.
 3. Select one of:
+   - `plugins/cursor`
    - `plugins/dist/cursor`
-   - `plugins/plugins/iwas`
-   - `plugins/` (repo marketplace → loads `plugins/iwas`)
+   - `plugins/` (repo marketplace → loads `./cursor`)
 
-Each of those folders contains `.cursor-plugin/marketplace.json`.
 ## MCP Client Configuration & Authentication
 
 IWAS exposes a high-performance Model Context Protocol (MCP) endpoint over Server-Sent Events (SSE) and HTTP at:
