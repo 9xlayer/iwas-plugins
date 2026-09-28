@@ -25,12 +25,12 @@
       "CLIENT_ID": {
         "type": "string",
         "title": "OAuth client ID",
-        "description": "Static OAuth client ID provisioned via pnpm mcp:create-client (Cursor does not support CIMD)."
+        "description": "Static OAuth client ID provisioned."
       },
       "CLIENT_SECRET": {
         "type": "string",
         "title": "OAuth client secret",
-        "description": "Static OAuth client secret for the Cursor MCP client. Set in Plugins → Configure; never commit the real value."
+        "description": "Static OAuth client secret for the Cursor MCP client."
       }
     },
     "required": ["CLIENT_ID", "CLIENT_SECRET"]

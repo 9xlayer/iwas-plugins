@@ -9,9 +9,13 @@ This repository contains multi-platform extensions, tools, skills, and model-con
 | Platform | Manifest & Location | Status |
 | --- | --- | --- |
 | **Cursor Marketplace** | `.cursor-plugin/marketplace.json`, `cursor/` | Pending Review (Submitted) |
-| **Anthropic Claude** | `.claude-plugin/plugin.json` | Supported |
+| **Anthropic Claude** | `.claude-plugin/plugin.json`, `.claude-plugin/marketplace.json` | Supported |
 | **OpenAI / ChatGPT** | `openai/plugin.json` | Supported |
 | **Cline** | `cline/` | Supported |
+
+Shared branding (`logoUrl`, `contact_email`, screenshots) is defined once in
+`config/manifest.config.ts` and written into Cursor / OpenAI / Claude sources
+plus `dist/` by `pnpm plugins:build`.
 
 ## Included Skills
 
@@ -27,6 +31,9 @@ This repository contains multi-platform extensions, tools, skills, and model-con
 iwas-plugins/
 ├── .cursor-plugin/
 │   └── marketplace.json            # Repo marketplace (source: ./cursor)
+├── .claude-plugin/
+│   ├── plugin.json                 # Claude plugin manifest (+ shared logo metadata)
+│   └── marketplace.json            # Claude marketplace (owner email + homepage)
 ├── assets/
 │   └── logo.svg                    # Shared brand mark (Cursor / OpenAI / Claude)
 ├── cursor/                         # Cursor Plugin package (Add-from-folder target)
@@ -46,7 +53,7 @@ iwas-plugins/
 │   └── iwas-openai-plugin.zip
 ├── skills/                         # Canonical skills source
 ├── cline/
-├── openai/
+├── openai/                         # OpenAI Connected App (logo + screenshots from manifest)
 ├── config/
 ├── scripts/
 ├── LICENSE
