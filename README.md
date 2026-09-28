@@ -28,12 +28,12 @@ iwas-plugins/
 ├── .cursor-plugin/
 │   └── marketplace.json            # Cursor Marketplace catalog definition
 ├── dist/                           # Compiled distribution bundles for each platform
-│   ├── cursor/                     # Cursor pre-built bundle (.cursor/mcp.json + skills)
+│   ├── cursor/                     # Cursor Plugin bundle (.cursor-plugin/plugin.json + mcp.json + skills)
 │   ├── claude/                     # Claude bundle (.claude-plugin/plugin.json + marketplace.json + skills)
 │   ├── openai/                     # OpenAI bundle (plugin.json + mcp.json + skills)
 │   └── iwas-openai-plugin.zip      # Packaged zip for OpenAI portal upload
 ├── plugins/
-│   ├── iwas/                       # Cursor plugin package
+│   ├── iwas/                       # Cursor plugin package (marketplace source of truth)
 │   │   ├── .cursor-plugin/
 │   │   │   └── plugin.json
 │   │   ├── assets/logo.svg
