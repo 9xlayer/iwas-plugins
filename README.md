@@ -27,6 +27,8 @@ This repository contains multi-platform extensions, tools, skills, and model-con
 iwas-plugins/
 ├── .cursor-plugin/
 │   └── marketplace.json            # Repo marketplace (source: ./cursor)
+├── assets/
+│   └── logo.svg                    # Shared brand mark (Cursor / OpenAI / Claude)
 ├── cursor/                         # Cursor Plugin package (Add-from-folder target)
 │   ├── .cursor-plugin/
 │   │   ├── marketplace.json        # self-source "." for folder install
@@ -36,7 +38,6 @@ iwas-plugins/
 │   ├── commands/
 │   ├── hooks/
 │   ├── skills/
-│   ├── assets/
 │   └── mcp.json
 ├── dist/
 │   ├── cursor/                     # Built copy of cursor/ (+ refreshed skills)

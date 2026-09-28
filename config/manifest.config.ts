@@ -46,7 +46,7 @@ export const iwasPluginManifest: PluginManifestConfig = {
       'IWAS – Intelligent WiFi Access & Presence Service. Monitor hotspot network, manage packages, audit accounting, and track revenue directly from your AI assistant.',
     descriptionModel:
       'IWAS assistant plugin. Enables AI assistants to interact with the IWAS API to query hotspot diagnostics, analyze network revenue, inspect active user sessions, optimize package offerings, and publish content.',
-    logoUrl: 'https://getiwas.com/logo-mark-512.png',
+    logoUrl: 'https://raw.githubusercontent.com/9xlayer/iwas-plugins/main/assets/logo.svg',
     screenshots: [
       'https://getiwas.com/screenshots/diagnostics.jpg',
       'https://getiwas.com/screenshots/revenue.jpg',

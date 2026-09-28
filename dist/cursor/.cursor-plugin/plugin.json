@@ -18,7 +18,7 @@
     "presence",
     "billing"
   ],
-  "logo": "https://raw.githubusercontent.com/9xlayer/iwas-plugins/main/cursor/assets/logo.svg",
+  "logo": "https://raw.githubusercontent.com/9xlayer/iwas-plugins/main/assets/logo.svg",
   "variables": {
     "type": "object",
     "properties": {
