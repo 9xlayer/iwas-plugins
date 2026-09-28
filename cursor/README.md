@@ -26,7 +26,7 @@ Because Cursor's UI does not currently prompt for Initial Access Tokens, product
 
 1. **Ask your IWAS deployment operator** to provision a client ID and secret via:
    ```bash
-   pnpm mcp:create-client -- --client-id cursor --name "Cursor IDE" --redirect-uri http://localhost:8787/callback --scopes "diagnostics:read,diagnostics:write,session:read,analytics:read,package:read,blog:read,blog:write,blog:publish,offline_access" --apply
+   pnpm mcp:create-client -- --client-id cursor --name "Cursor IDE" --redirect-uri http://localhost:8787/callback --redirect-uri https://www.cursor.com/agents/mcp/oauth/callback --redirect-uri cursor://anysphere.cursor-mcp/oauth/callback --scopes "diagnostics:read,diagnostics:write,session:read,analytics:read,package:read,blog:read,blog:write,blog:publish,offline_access" --apply
    ```
 
 2. **Configure `.cursor/mcp.json`:**
