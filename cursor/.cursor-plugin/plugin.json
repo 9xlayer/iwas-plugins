@@ -18,7 +18,7 @@
     "presence",
     "billing"
   ],
-  "logo": "https://getiwas.com/logo-mark-512.png",
+  "logo": "https://raw.githubusercontent.com/9xlayer/iwas-plugins/main/cursor/assets/logo.svg",
   "variables": {
     "type": "object",
     "properties": {

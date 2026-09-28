@@ -13,7 +13,7 @@
       "name": "iwas",
       "source": "./cursor",
       "description": "Intelligent WiFi Access & Presence Service assistant plugin for hotspot health, session monitoring, and revenue analysis.",
-      "logo": "https://getiwas.com/logo-mark-512.png"
+      "logo": "https://raw.githubusercontent.com/9xlayer/iwas-plugins/main/cursor/assets/logo.svg"
     }
   ]
 }
