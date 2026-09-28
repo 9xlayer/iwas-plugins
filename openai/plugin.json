@@ -30,6 +30,11 @@
     "@IWAS, analyze package performance and suggest optimal promo windows.",
     "@IWAS, list recent blog posts on the captive portal."
   ],
+  "screenshots": [
+    "https://getiwas.com/screenshots/diagnostics.jpg",
+    "https://getiwas.com/screenshots/revenue.jpg",
+    "https://getiwas.com/screenshots/sessions.jpg"
+  ],
   "category": "Business",
   "version": "1.0.0"
 }

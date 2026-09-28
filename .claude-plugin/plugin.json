@@ -7,6 +7,21 @@
     "email": "support@getiwas.com",
     "url": "https://getiwas.com"
   },
+  "homepage": "https://getiwas.com",
+  "repository": "https://github.com/9xlayer/iwas-plugins",
+  "license": "MIT",
+  "keywords": [
+    "iwas",
+    "wifi",
+    "hotspot",
+    "radius",
+    "network",
+    "presence",
+    "billing"
+  ],
+  "metadata": {
+    "logo": "https://raw.githubusercontent.com/9xlayer/iwas-plugins/main/assets/logo.svg"
+  },
   "mcpServers": {
     "iwas": {
       "url": "https://getiwas.com/mcp"
