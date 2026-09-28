@@ -18,5 +18,21 @@
     "presence",
     "billing"
   ],
-  "logo": "assets/logo.svg"
+  "logo": "assets/logo.svg",
+  "variables": {
+    "type": "object",
+    "properties": {
+      "CLIENT_ID": {
+        "type": "string",
+        "title": "OAuth client ID",
+        "description": "Static OAuth client ID provisioned via pnpm mcp:create-client (Cursor does not support CIMD)."
+      },
+      "CLIENT_SECRET": {
+        "type": "string",
+        "title": "OAuth client secret",
+        "description": "Static OAuth client secret for the Cursor MCP client. Set in Plugins → Configure; never commit the real value."
+      }
+    },
+    "required": ["CLIENT_ID", "CLIENT_SECRET"]
+  }
 }

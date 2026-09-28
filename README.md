@@ -62,6 +62,8 @@ iwas-plugins/
    - `plugins/cursor`
    - `plugins/dist/cursor`
    - `plugins/` (repo marketplace → loads `./cursor`)
+4. Open **Plugins → Configure** on the IWAS plugin and set `CLIENT_ID` / `CLIENT_SECRET`
+   (provision with `pnpm mcp:create-client` — Cursor does not support CIMD; production requires static credentials).
 
 ## MCP Client Configuration & Authentication
 
