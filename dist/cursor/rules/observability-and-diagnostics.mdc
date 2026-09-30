@@ -1,0 +1,28 @@
+---
+description: Protocol for diagnosing errors, traces, and system health via IWAS MCP
+alwaysApply: true
+---
+
+# Observability & Diagnostics Protocol
+
+When investigating errors, bugs, HTTP 500s, performance slowdowns, or hotspot/router anomalies in IWAS:
+
+1. **Prioritize Live Telemetry Over Speculation:**
+   - Always prioritize live telemetry and observability data over guessing or speculative code reading.
+   - Do not propose code fixes before verifying the exact runtime error evidence.
+
+2. **Standard Diagnostic Tool Sequence:**
+   - Call `list_issues({ status: 'open' })` to identify recurring failure clusters, auto-escalated severities, and triage statuses.
+   - Call `list_error_events({ limit: 10, statusCode: 500 })` to fetch the recent unhandled exceptions, exact paths, and sanitized stack traces.
+   - For an incident with a known `requestId` or `traceId`, invoke `get_error_by_request_id({ requestId })` and `get_mcp_span({ requestId })` to inspect the complete execution timeline.
+   - Call `list_flow_events` for interactive multi-stage journey failures (OAuth, login, package checkout).
+
+3. **Citing Concrete Evidence:**
+   - Never invent failure causes without citing specific error fingerprints, timestamps, status codes, or stack traces returned by the diagnostics tools.
+
+4. **Structured RCA Summary:**
+   - Every troubleshooting response must present:
+     - **Symptom & Severity**: Status badge and impact scope.
+     - **Trace & Error Evidence**: Quoting Request ID, duration, and stack snippet.
+     - **Root Cause Hypothesis**: Falsifiable explanation of why the failure occurred.
+     - **Remediation**: Immediate operational mitigation and permanent code fix.

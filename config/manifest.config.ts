@@ -66,6 +66,8 @@ export const iwasPluginManifest: PluginManifestConfig = {
   },
   starterPrompts: [
     '@IWAS, check network health and diagnose any router or RADIUS issues.',
+    '@IWAS, investigate recent system errors and triage open issues.',
+    '@IWAS, trace request {requestId} and inspect failure timeline.',
     '@IWAS, produce a revenue digest and summarize today\'s top performing packages.',
     '@IWAS, how many active sessions are currently online on the hotspot?',
     '@IWAS, analyze package performance and suggest optimal promo windows.',
