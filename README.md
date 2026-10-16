@@ -9,12 +9,13 @@ This repository contains multi-platform extensions, tools, skills, and model-con
 | Platform | Manifest & Location | Status |
 | --- | --- | --- |
 | **Cursor Marketplace** | `.cursor-plugin/marketplace.json`, `cursor/` | Pending Review (Submitted) |
+| **Google Antigravity** | `antigravity/plugin.json`, `antigravity/` | Supported |
 | **Anthropic Claude** | `.claude-plugin/plugin.json`, `.claude-plugin/marketplace.json` | Supported |
 | **OpenAI / ChatGPT** | `openai/plugin.json` | Supported |
 | **Cline** | `cline/` | Supported |
 
 Shared branding (`logoUrl`, `contact_email`, screenshots) is defined once in
-`config/manifest.config.ts` and written into Cursor / OpenAI / Claude sources
+`config/manifest.config.ts` and written into Cursor / OpenAI / Claude / Antigravity sources
 plus `dist/` by `pnpm plugins:build`.
 
 ## Included Skills
@@ -35,7 +36,12 @@ iwas-plugins/
 │   ├── plugin.json                 # Claude plugin manifest (+ shared logo metadata)
 │   └── marketplace.json            # Claude marketplace (owner email + homepage)
 ├── assets/
-│   └── logo.svg                    # Shared brand mark (Cursor / OpenAI / Claude)
+│   └── logo.svg                    # Shared brand mark (Cursor / OpenAI / Claude / Antigravity)
+├── antigravity/                    # Antigravity plugin package
+│   ├── plugin.json                 # Antigravity manifest
+│   ├── mcp_config.json             # Antigravity MCP config
+│   ├── rules/                      # Diagnostics & MCP rules
+│   └── skills/                     # Synced skills
 ├── cursor/                         # Cursor Plugin package (Add-from-folder target)
 │   ├── .cursor-plugin/
 │   │   ├── marketplace.json        # self-source "." for folder install
@@ -47,6 +53,7 @@ iwas-plugins/
 │   ├── skills/
 │   └── mcp.json
 ├── dist/
+│   ├── antigravity/                # Distributable Antigravity plugin package
 │   ├── cursor/                     # Built copy of cursor/ (+ refreshed skills)
 │   ├── claude/
 │   ├── openai/
@@ -59,6 +66,23 @@ iwas-plugins/
 ├── LICENSE
 └── README.md
 ```
+
+### Install in Google Antigravity
+
+Antigravity discovers plugins either within a customization root (`.agents/plugins/<name>/`) or explicitly registered in `plugins.json` (see [Antigravity Plugins Guide](https://antigravity.google/docs/plugins/)):
+
+1. Build all plugins: `pnpm plugins:build` (or `pnpm plugins:build:antigravity`).
+2. To use inside your project workspace, either:
+   - Copy or symlink `plugins/dist/antigravity` to `.agents/plugins/iwas`.
+   - Or add `plugins/dist/antigravity` into `.agents/plugins.json`:
+     ```json
+     {
+       "entries": [
+         { "path": "plugins/dist/antigravity" }
+       ]
+     }
+     ```
+3. For global machine-wide availability, register the path in `~/.gemini/config/plugins.json`.
 
 ### Install locally in Cursor
 
