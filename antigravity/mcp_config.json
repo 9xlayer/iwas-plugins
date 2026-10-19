@@ -1,7 +1,7 @@
 {
   "mcpServers": {
     "iwas": {
-      "serverUrl": "https://getiwas.com/mcp"
+      "url": "https://getiwas.com/mcp"
     }
   }
 }

@@ -3,6 +3,12 @@
   "displayName": "IWAS",
   "version": "1.0.0",
   "description": "IWAS – Intelligent WiFi Access & Presence Service. Monitor hotspot network, manage packages, audit accounting, and track revenue directly from your AI assistant.",
+  "logo": "assets/logo.svg",
+  "suggestedPrompts": [
+    "Check network health and diagnose router or RADIUS issues",
+    "Produce a revenue digest and summarize today's top performing packages",
+    "How many active sessions are currently online on the hotspot?"
+  ],
   "author": {
     "name": "9xlayer",
     "email": "support@getiwas.com",
@@ -19,6 +25,5 @@
     "billing"
   ],
   "homepage": "https://getiwas.com",
-  "repository": "https://github.com/9xlayer/iwas-plugins",
-  "logo": "https://raw.githubusercontent.com/9xlayer/iwas-plugins/main/assets/logo.svg"
+  "repository": "https://github.com/9xlayer/iwas-plugins"
 }
